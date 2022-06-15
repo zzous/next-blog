@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    // "baseUrl": "./",
-    // "paths": {
-    //   "@/*": [
-    //     "./src/*"
-    //   ]
-    // },
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "target": "es6",
     "lib": [
       "dom",
@@ -23,6 +23,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     // "resolveJsonModule": true
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "include": [
     ".",

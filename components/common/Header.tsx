@@ -1,7 +1,8 @@
+import Link from 'next/link'
 const Header = () => {
   return (
     <div id='header'>
-      <a href="/">header</a>
+      <Link href="/">header</Link>
     </div>
   )
 }
