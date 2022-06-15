@@ -4,11 +4,13 @@ import Nav from './common/Nav';
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div id='wrap'>
       <Header />
       <Nav />
-      {children}
+      <div id='container'>
+        {children}
+      </div>
       <Footer />
-    </>
+    </div>
   )
 }

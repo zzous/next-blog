@@ -1,21 +1,22 @@
 import React, { useEffect } from 'react'
 // import SyntaxHighlighter from 'react-syntax-highlighter';
-// import Prism from 'prismjs'
-// import 'prismjs/components/prism-javascript' // Language
-// import 'prismjs/themes/prism-okaidia.css' // Theme
+import Prism from 'prismjs'
+import 'prismjs/components/prism-javascript' // Language
+import 'prismjs/themes/prism-okaidia.css' // Theme
 
 
 const TsConfig = () => {
-  // useEffect(() => {
-  //   Prism.highlightAll();
-  // }, []);
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
-    <div>
+    <div className='code'>
       <pre>
-        <code className='language-javascript'>
+        <code className='language-js'>
           {
-            `{
+            `
+            {
               "compilerOptions": {
   
                 "target": "es5", // 'es3', 'es5', 'es2015', 'es2016', 'es2017','es2018', 'esnext' 가능
