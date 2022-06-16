@@ -1,11 +1,15 @@
+a { color: #4285f4; }
+a:hover { color: #2063d1; }
 
 /* layouts */
 #wrap { padding: 50px; }
 
 #header { position: fixed; top: 0; left: 0; }
 
-#nav { position: fixed; top: 100px; left: 0; height: calc(100% - 200px); }
+#nav { position: fixed; top: 100px; left: 0; width: 200px; height: calc(100% - 200px); }
+#nav .title { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; }
 
 #container { padding-left: 300px; }
+#container .title { padding: 10px 0; font-size: 20px; }
 
 #footer { position: fixed; bottom: 0; left: 0; }

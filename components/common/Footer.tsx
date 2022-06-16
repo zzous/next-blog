@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div id='footer'>
-      Footer
+      @Footer
     </div>
   )
 }
