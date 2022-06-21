@@ -8,8 +8,6 @@
   "plugins": ["@typescript-eslint","import"],
   "extends": [
     "next/core-web-vitals",
-    "airbnb",
-    "airbnb/hooks",
     "prettier/react",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
