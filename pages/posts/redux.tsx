@@ -26,8 +26,13 @@ yarn add @reduxjs/toolkit
         }
       </Code>
       <div>
-        <div className='title'>slice</div>
+        <div className='title'>configureStore</div>
+        <div className='title'>createSlice</div>
         <p>action + reducer → slice</p>
+        <div className='title'>createAsyncThunk</div>
+        <div className='title'>createSelector</div>
+        {/* <p>Defect security of useSelector function: Only works when the value stored in memory is changed using memoization</p> */}
+        <p>useSelector 함수의 결점보안: memoization 을 이용하여 메모리에 저장된 값이 변경되었을 경우에만 동작</p>
       </div>
       
       <div className='title'># Redux Sub Package</div>
