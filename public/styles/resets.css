@@ -22,6 +22,7 @@ table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, header, fo
   text-size-adjust: none;
   -webkit-text-size-adjust:none;
   vertical-align: baseline;
+  line-height: 1.5;
 }
 
 header, footer, nav, section, main {

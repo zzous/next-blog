@@ -1,5 +1,5 @@
 import Layout from 'components/Layout'
-import 'public/styles/globals.css'
+import 'public/styles/resets.css'
 import 'public/styles/common.css'
 
 function MyApp({ Component, pageProps }) {
