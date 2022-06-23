@@ -1,9 +1,13 @@
 import Code from 'components/prism/Code'
 const Redux = () => {
   return (
-    <div>
-      <div className='title'># Redux Core</div>
-      <div className='title'>install</div>
+    <>
+      <div className='title'># Redux</div>
+      <p>Redux 는 기본적으로 Flux Pattern 구현체로, MVC Pattern 의 의존성, 복잡도를 해소하기 위해 고안</p>
+      <Code language='js'>
+        {`Action > Dispach > Store > View`}
+      </Code>
+      <div className='title sub'>install</div>
       <Code language='bash'>
         {
 `# NPM
@@ -32,17 +36,17 @@ yarn add @reduxjs/toolkit
         }
       </Code>
       <div>
-        <div className='title'>configureStore</div>
-        <div className='title'>createSlice</div>
+        <div className='title sub'>configureStore</div>
+        <div className='title sub'>createSlice</div>
         <p>action + reducer → slice</p>
-        <div className='title'>createAsyncThunk</div>
-        <div className='title'>createSelector</div>
+        <div className='title sub'>createAsyncThunk</div>
+        <div className='title sub'>createSelector</div>
         {/* <p>Defect security of useSelector function: Only works when the value stored in memory is changed using memoization</p> */}
         <p>useSelector 함수의 결점보안: memoization 을 이용하여 메모리에 저장된 값이 변경되었을 경우에만 동작</p>
       </div>
       
       <div className='title'># Redux Sub Package</div>
-      <div className='title'>install</div>
+      <div className='title sub'>install</div>
       <Code language='bash'>
         {
 `# NPM
@@ -54,7 +58,7 @@ npm install @types/react-redux
 `
         }
       </Code>
-    </div>
+    </>
   )
 }
 export default Redux
