@@ -58,6 +58,10 @@ npm install @types/react-redux
 `
         }
       </Code>
+      <div className='title sub'>react-redux</div>
+      <p>Redux의 기능을 효율적으로 편리하게 사용하기 위한 Sub Package</p>
+      <p>useSelector: connect 를 사용하지 않고 store 의 상태관리 조회</p>
+      <p>useDispatch</p>
     </>
   )
 }

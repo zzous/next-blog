@@ -1,0 +1,26 @@
+{
+  "liveServer.settings.port": 5501,
+  "path-intellisense.mappings": {
+      "@": "${workspaceFolder}/src"
+  },
+  // & ESLint
+  "eslint.alwaysShowStatus": true,
+  "eslint.workingDirectories": [
+      {
+          "mode": "auto"
+      }
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "search.useGlobalIgnoreFiles": false,
+  "search.useParentIgnoreFiles": false
+}

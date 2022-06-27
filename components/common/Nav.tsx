@@ -1,5 +1,5 @@
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
-import Link from 'next/link'
+import Link from 'next/link';
 const Header = () => {
   return (
     <div id='nav'>
@@ -8,9 +8,10 @@ const Header = () => {
       </div>
       <div className='title'>POSTS <AiFillCaretUp /></div>
       <ul>
-        <li><Link href='/dependencies/prismjs'>prismjs code highlighter</Link></li>
+        <li><Link href='/posts/react'>react</Link></li>
         <li><Link href='/posts/redux'>redux</Link></li>
         <li><Link href='/posts/craco'>craco</Link></li>
+        <li><Link href='/dependencies/prismjs'>prismjs code highlighter</Link></li>
       </ul>
       <div className='title'>SETTINGS <AiFillCaretUp /></div>
       <ul>
@@ -20,4 +21,4 @@ const Header = () => {
     </div>
   )
 }
-export default Header
+export default Header;
