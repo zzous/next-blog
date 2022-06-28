@@ -9,8 +9,8 @@ a:hover { color: #2063d1; }
 #nav { position: fixed; top: 100px; left: 0; width: 200px; height: calc(100% - 200px); }
 #nav .title { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; }
 
-#container { padding-left: 300px; }
-#container .title { margin-top: 30px; padding: 10px 0; font-size: 24px; }
+#container { padding-left: 300px; color: #333; }
+#container .title { margin-top: 30px; padding: 10px 0; font-size: 24px; color: #000; }
 #container .title.sub { margin-top: 10px; font-size: 22px; }
 #container .title:first-child { margin-top: 0; }
 
@@ -19,3 +19,7 @@ a:hover { color: #2063d1; }
 
 
 .textarea { width: 200px; min-height: 10px; padding: 10px; border: 1px solid #ddd; }
+
+.pointBlock { display: inline-block; padding: 0 5px; background: #eaeaea; }
+.list { margin-top: 10px; }
+.list li { margin-top: 5px; }

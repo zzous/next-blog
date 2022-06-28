@@ -11,7 +11,7 @@ const Header = () => {
         <li><Link href='/posts/react'>react</Link></li>
         <li><Link href='/posts/redux'>redux</Link></li>
         <li><Link href='/posts/craco'>craco</Link></li>
-        <li><Link href='/dependencies/prismjs'>prismjs code highlighter</Link></li>
+        {/* <li><Link href='/dependencies/prismjs'>prismjs code highlighter</Link></li> */}
       </ul>
       <div className='title'>SETTINGS <AiFillCaretUp /></div>
       <ul>
