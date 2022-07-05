@@ -7,6 +7,7 @@ import 'prismjs/themes/prism-okaidia.css' // Theme
 
 const Code = (props) => {
   useEffect(() => {
+    console.log(props)
     Prism.highlightAll();
   }, []);
   return (

@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import Code from 'components/prism/Code'
 const Redux = () => {
   return (
     <>
       <div className='title'># Redux</div>
-      <p>Redux 는 기본적으로 Flux Pattern 구현체로, MVC Pattern 의 의존성, 복잡도를 해소하기 위해 고안</p>
+      <p>Redux 는 기본적으로 <Link href={'https://facebook.github.io/flux/docs/in-depth-overview/'}><a target='_blank'>Flux Pattern</a></Link> 구현체로, MVC(Model-View-Controller) Pattern 의 의존성, 복잡도를 해소하기 위해 고안</p>
       <Code language='js'>
         {`Action > Dispach > Store > View`}
       </Code>
