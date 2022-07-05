@@ -60,6 +60,7 @@ npx create-next-app project-name
       </ul>
 
       <div className='title sub'>useReducer</div>
+      <p>useState의 대체 함수</p>
 
       <div className='title sub'>useCallback</div>
       <p>함수를 메모이제이션(memoization)하기 위해서 사용되는 hook 함수. 첫번째 인자로 넘어온 함수를, 두번째 인자로 넘어온 배열 내의 값이 변경될 때까지 저장해놓고 재사용</p>
