@@ -4,9 +4,9 @@ a:hover { color: #2063d1; }
 /* layouts */
 #wrap { padding: 50px; }
 
-#header { position: fixed; top: 0; left: 0; }
+#header { position: fixed; top: 50px; left: 50px; }
 
-#nav { position: fixed; top: 100px; left: 0; width: 200px; height: calc(100% - 200px); }
+#nav { position: fixed; top: 100px; left: 50px; width: 200px; height: calc(100% - 200px); }
 #nav .title { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; }
 
 #container { padding-left: 300px; color: #333; }
@@ -14,7 +14,7 @@ a:hover { color: #2063d1; }
 #container .title.sub { margin-top: 10px; font-size: 22px; }
 #container .title:first-child { margin-top: 0; }
 
-#footer { position: fixed; bottom: 0; left: 0; }
+#footer { position: fixed; bottom: 50px; left: 50px; }
 
 
 
