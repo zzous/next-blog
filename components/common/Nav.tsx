@@ -13,6 +13,7 @@ const Header = () => {
         <li><Link href='/posts/craco'>craco</Link></li>
         <li><Link href='/posts/router'>router</Link></li>
         <li><Link href='/posts/next'>Next.js</Link></li>
+        <li><Link href='/posts/curriculum'>front-end</Link></li>
         {/* <li><Link href='/dependencies/prismjs'>prismjs code highlighter</Link></li> */}
       </ul>
       <div className='title'>SETTINGS <AiFillCaretUp /></div>

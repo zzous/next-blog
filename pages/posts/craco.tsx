@@ -25,7 +25,7 @@ npx create-next-app project-name
 `
         }
       </Code>
-      <p>creat-react-app 으로 시작된 프로젝트의 설정들은 기본적으로 숨김상태이다. <span className='pointBlock'>npm run eject</span> 를 실행하게되면 숨겨져 있던 webpack, babel 등의 설정파일과 dependencies 등을 볼 수 있다.</p>
+      <p>creat-react-app 으로 시작된 프로젝트의 설정들은 기본적으로 숨김상태이다. <span className='box'>npm run eject</span> 를 실행하게되면 숨겨져 있던 webpack, babel 등의 설정파일과 dependencies 등을 볼 수 있다.</p>
       <p>* eject를 수행하게 되면 이전 상태로 돌릴 수 없음</p>
       <p>이러한 설정들을 Override하기 위해 craco 등장한다.</p>
 

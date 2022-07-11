@@ -54,9 +54,9 @@ npx create-next-app project-name
       <p>context는 React 컴포넌트 트리 안에서 전역적(global)이라고 볼 수 있는 데이터를 공유할 수 있도록 고안된 방법 ( react 공식문서 )</p>
       <p>props를 이용하여 데이터 전달할 필요 없이 context를 이용하여 데이터를 전달</p>
       <ul className='list'>
-        <li><span className='pointBlock'>createContext</span> : context 생성</li>
-        <li><span className='pointBlock'>Provider</span> : context 전달</li>
-        <li><span className='pointBlock'>Consumer</span> : context 변화 감시 역할</li>
+        <li><span className='box'>createContext</span> : context 생성</li>
+        <li><span className='box'>Provider</span> : context 전달</li>
+        <li><span className='box'>Consumer</span> : context 변화 감시 역할</li>
       </ul>
 
       <div className='title sub'>useReducer</div>

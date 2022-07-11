@@ -20,6 +20,6 @@ a:hover { color: #2063d1; }
 
 .textarea { width: 200px; min-height: 10px; padding: 10px; border: 1px solid #ddd; }
 
-.pointBlock { display: inline-block; padding: 0 5px; background: #eaeaea; }
+.box { display: inline-block; padding: 0 5px; border-radius: 3px; background: #eaeaea; }
 .list { margin-top: 10px; }
 .list li { margin-top: 5px; }
