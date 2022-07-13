@@ -5,6 +5,7 @@ a:hover { color: #2063d1; }
 #wrap { padding: 50px; }
 
 #header { position: fixed; top: 50px; left: 50px; }
+.toggleNav { display: none; width: 50px; height: 50px; text-align: center; line-height: 50px; border-radius: 25px; background: rgba(255, 255, 255, 0.6); font-size: 20px; }
 
 #nav { position: fixed; top: 100px; left: 50px; width: 200px; height: calc(100% - 200px); }
 #nav .title { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; }
@@ -16,6 +17,11 @@ a:hover { color: #2063d1; }
 
 #footer { position: fixed; bottom: 50px; left: 50px; }
 
+@media (max-width: 1024px) {
+  .toggleNav { display: block; }
+  #nav { left: -300px; width: 300px; background: #fff; }
+  #container { padding-left: 0; }
+}
 
 
 .textarea { width: 200px; min-height: 10px; padding: 10px; border: 1px solid #ddd; }

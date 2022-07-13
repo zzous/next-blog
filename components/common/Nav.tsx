@@ -1,8 +1,9 @@
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
+import { isActiveNav } from '@/store/slice/layout';
 import Link from 'next/link';
 const Header = () => {
   return (
-    <div id='nav'>
+    <div id='nav' className={isActiveNav ? 'active' : ''}>
       <div className='search'>
         <input type='text' placeholder='search..' />
       </div>
