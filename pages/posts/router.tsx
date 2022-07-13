@@ -178,6 +178,7 @@ function App() {
 `
         }
       </Code>
+      <div className='title sub'>useHistory 대시 useNavigate 사용</div>
     </div>
   )
 }
