@@ -29,6 +29,15 @@ npm init nuxt-app project-name
       <p>Pages 폴더 안에있는 모든 .vue 파일을 읽고 router 를 생성</p>
       <div className='title sub'>Components</div>
       <p>Nuxt 에서는 component 를 import 를 하지 않고 자동으로 .vue 파일을 가져올 수 있다.</p>
+      <Code language='js'>
+        {
+`// nuxt.config.js
+export default {
+  components: true
+}
+`
+        }
+      </Code>
       <div className='title sub'>Assets</div>
       <p>styles, images, font 등 compile 되지 않는 파일들이 포함</p>
       <div className='title sub'>Static</div>
