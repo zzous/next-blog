@@ -16,6 +16,7 @@ const Header = () => {
       </div>
       <div className='title'>POSTS <AiFillCaretUp /></div>
       <ul>
+        <li><Link href='/posts/test'>test</Link></li>
         <li><Link href='/posts/react'>react</Link></li>
         <li><Link href='/posts/redux'>redux</Link></li>
         <li><Link href='/posts/craco'>craco</Link></li>
