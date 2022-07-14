@@ -10,6 +10,7 @@ export const layoutSlice = createSlice({
   reducers: {
     setlayoutMobile: (state, action) => {
       state.mobileNav = action.payload;
+      console.log('slice', isActiveNav)
     }
   }
 });

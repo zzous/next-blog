@@ -1,9 +1,16 @@
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
 import { isActiveNav } from '@/store/slice/layout';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 const Header = () => {
+  const activeNav = useSelector(isActiveNav);
+  // const [activeNav, setActiveNav] = useState();
+  // useEffect(() => {
+  //   console.log(activeNav)
+  // }, [activeNav])
   return (
-    <div id='nav' className={isActiveNav ? 'active' : ''}>
+    <div id='nav' className={activeNav ? 'active' : ''}>
       <div className='search'>
         <input type='text' placeholder='search..' />
       </div>
