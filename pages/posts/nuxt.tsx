@@ -25,6 +25,7 @@ npm init nuxt-app project-name
 
       <div className='title'># Directory</div>
       <p><img src="/images/directory.jpg" alt="directory" /></p>
+      
       <div className='title sub'>Pages</div>
       <p>Pages 폴더 안에있는 모든 .vue 파일을 읽고 router 를 생성</p>
       <div className='title sub'>Components</div>
@@ -85,9 +86,90 @@ export default {
       <p>[code] <Link href='https://nuxtjs.org/docs/directory-structure/layouts'><a target='_blank'>https://nuxtjs.org/docs/directory-structure/layouts</a></Link></p>
       <div className='title sub'>Middleware</div>
       <div className='title sub'>Plugins</div>
-      <div className='title sub'>next.config.js file</div>
+      <div className='title sub'>nuxt.config.js file</div>
       <div className='title sub'>package.json file</div>
+      
+      <div className='title'># Context and helpers</div>
+      <p>기본적으로 제공되는 context keys</p>
+      <Code language='js'>
+        {
+`function (context) { // Could be asyncData, nuxtServerInit, ...
+  // Always available
+  const {
+    app,
+    store,
+    route,
+    params,
+    query,
+    env,
+    isDev,
+    isHMR,
+    redirect,
+    error,
+    $config
+  } = context
 
+  // Only available on the Server-side
+  if (process.server) {
+    const { req, res, beforeNuxtRender } = context
+  }
+
+  // Only available on the Client-side
+  if (process.client) {
+    const { from, nuxtState } = context
+  }
+}
+
+// [code] https://nuxtjs.org/docs/concepts/context-helpers
+`
+        }
+      </Code>
+
+      <div className='title sub'>Refreshing page data</div>
+      <Code language='js'>
+        {
+`<template>
+<div>
+  <div>{{ content }}</div>
+  <button @click="refresh">Refresh</button>
+</div>
+</template>
+
+<script>
+export default {
+  asyncData() {
+    return { content: 'Created at: ' + new Date() }
+  },
+  methods: {
+    refresh() {
+      this.$nuxt.refresh()
+    }
+  }
+}
+</script>
+
+// [code] https://nuxtjs.org/docs/concepts/context-helpers
+`
+        }
+      </Code>
+      <div className='title sub'>Controlling the loading bar</div>
+      <Code language='js'>
+        {
+`export default {
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
+  }
+}
+
+// [code] https://nuxtjs.org/docs/concepts/context-helpers
+`
+        }
+      </Code>
+
+      
     </div>
   )
 }
