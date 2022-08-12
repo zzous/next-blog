@@ -5,7 +5,7 @@ const ES2022 = () => {
   return (
     <div>
       <div className='title'># ES2022</div>
-      <div className='title sub'>인덱싱 가능한 값의 메서드 .at().</div>
+      <div className='title sub'>인덱싱 가능한 값의 메서드 .at()</div>
       <p>이 함수는 주어진 인덱스에서 요소를 읽어 반환한다.</p>
       <p>음수 적용 가능 ( 뒤에서 읽음 )</p>
 
@@ -190,24 +190,161 @@ console.log(foo) // baz
         }
       </Code>
       <div className='title sub'>Logical nullish assignment (??=)</div>
+      <p>null or undefined 일때 할당</p>
+      <Code language='js'>
+        {
+`let foo;
+foo ??= 'bar';
+console.log(foo) // bar
+
+foo = false;
+
+foo ??= 'baz';
+console.log(foo) // bar (No assignment because foo is not nullish)
+`
+        }
+      </Code>
 
       <div className='title'># ES2020</div>
       <div className='title sub'>Dynamic Import</div>
-      <div className='title sub'>Private Class Variables</div>
+      <p>동적으로 module 을 가져올 수 있게 되어, await 와 함께 사용할 수 있다.</p>
+      <Code language='js'>
+        {
+`// module.js
+const example = (value) => console.log(value);
+export { example };
+
+// in page
+const doExample = async (value) => {
+  const _module = await import('module.js');
+  _module.example(value);
+};
+doExample('test');`
+        }
+      </Code>
+      <div className='title sub'>Private Variables in Class</div>
+      <p>Class 내에서 개인 변수 선언 가능 ( 외부에서는 사용 할 수 없음 )</p>
+      <Code language='js'>
+        {
+`class MyClass {
+  #privateVariable = "Hello world"
+
+  helloWorld() {
+    console.info(this.#privateVariable)
+  }
+}
+
+const myClass = new MyClass();
+myClass.helloWorld();     // Hello world
+console.info(myClass.#privateVariable)  // SyntaxError`
+        }
+      </Code>
+
       <div className='title sub'>Optional Chaining</div>
+      <p>?. 연산자는 . 체이닝 연산자와 유사하게 작동하지만, 참조가 nullish ( null 또는 undefined ) 라면, 에러가 발생하는 것 대신에 undefined 리턴</p>
+      <Code language='js'>
+        {
+`const adventurer = {
+  name: 'Alice',
+  cat: {
+    name: 'Dinah'
+  }
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// expected output: undefined`
+        }
+      </Code>
+      <p>[Code] <Link href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining'><a target='_blank'>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining</a></Link></p>
+      
       <div className='title sub'>Promise.allSettled</div>
+      <p><Link href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled'><a target='_blank'>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled</a></Link></p>
+
       <div className='title sub'>String.prototype.matchAll()</div>
+      <p><Link href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll'><a target='_blank'>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll</a></Link></p>
+
       <div className='title sub'>globalThis</div>
+      <p><Link href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis'><a target='_blank'>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis</a></Link></p>
+
       <div className='title sub'>BigInt</div>
+      <p><Link href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt'><a target='_blank'>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt</a></Link></p>
+
       <div className='title sub'>Nullish Coalescing Operator</div>
+      <p>nullish 병합 연산자 (??) 는 왼쪽이 null or undefined 인경우 오른쪽 피연산자를 반환하고, 그렇지 않으면 왼쪽을 반환한다. ( false or NaN 의 경우는 해당 안됨 )</p>
+      <Code language='js'>
+        {
+`const foo = null ?? 'default string';
+console.log(foo);
+// expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// expected output: 0`
+        }
+      </Code>
+      <p>[Code] <Link href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator'><a target='_blank'>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator</a></Link></p>
 
       <div className='title'># ES2019</div>
       <div className='title sub'>Object.fromEntries()</div>
+      <p><span className="box">Object.fromEntries()</span> 메서드는 키값 쌍의 목록을 객체로 바꾼다.</p>
+      <Code language='js'>
+        {
+          `const entries = [
+  ['foo', 'bar'],
+  ['baz', 42]
+];
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// expected output: Object { foo: "bar", baz: 42 }`
+        }
+      </Code>
+      <p>[Code] <Link href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries'><a target='_blank'>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries</a></Link></p>
+
       <div className='title sub'>trimStart() and trimEnd()</div>
-      <div className='title sub'>flat() and flatMap()</div>
-      <div className='title sub'>Symbol object description property</div>
-      <div className='title sub'>catch optional binging</div>
-      <div className='title sub'>well formatted JSON.stringify</div>
+      <p><span className="box">trimStart()</span> 메서드는 문자열 시작부분의 공백을 제거</p>
+      <p><span className="box">trimEnd()</span> 메서드는 문자열 끝부분의 공백을 제거</p>
+      <p><span className="box">trim()</span> 메서드는 문자열 양 끝의 공백을 제거</p>
+      <Code language='js'>
+        {
+`const greeting = '   Hello world!   ';
+
+console.log(greeting.trimStart());
+// expected output: "Hello world!   ";
+
+console.log(greeting.trimEnd());
+// expected output: "   Hello world!";
+
+console.log(greeting.trim());
+// expected output: "Hello world!";`
+        }
+      </Code>
+
+      <div className='title sub'>Array.prototype.flat() and Array.prototype.flatMap()</div>
+      <p>flat() 메서드는 모든 하위 배열 요소를 지정한 깊이까지 재귀적으로 이어붙인 새로운 배열을 생성</p>
+      <p>flatMap() 메서드는 배열에 대한 결합된 병합 및 매핑 동작. 결과를 단일 배열로 병합</p>
+      <p><Link href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap'><a target='_blank'>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap</a></Link></p>
+      <Code language='js'>
+        {
+          `[1, 2, 3, 4, 5].map(data => [data * 2, data * 3]);
+          //[[2, 3], [4, 6], [6, 9], [8, 12], [10, 15]]
+          
+          [1, 2, 3, 4, 5].map(data => [data * 2, data * 3]).flat();
+          //[2, 3, 4, 6, 6, 9, 8, 12, 10, 15];
+          
+          [1, 2, 3, 4, 5].flatMap(data => [data * 2, data * 3]);
+          //[2, 3, 4, 6, 6, 9, 8, 12, 10, 15]`
+        }
+      </Code>
+
+
+      <div className='title sub'>Symbol.prototype.description</div>
+        <p><Link href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description'><a target='_blank'>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description</a></Link></p>
 
       <div className='title'># ES2018</div>
       <div className='title sub'>Lifting template literal restriction.</div>

@@ -25,6 +25,7 @@ const Header = () => {
         <li><Link href='/posts/nuxt'>Nuxt.js</Link></li>
         <li><Link href='/posts/curriculum'>front-end</Link></li>
         <li><Link href='/posts/es2022'>ES2022</Link></li>
+        <li><Link href='/posts/npm'>NPM dependencies</Link></li>
         {/* <li><Link href='/dependencies/prismjs'>prismjs code highlighter</Link></li> */}
       </ul>
       <div className='title'>SETTINGS <AiFillCaretUp /></div>

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-javascript' // Language
 import 'prismjs/components/prism-bash' // Language
+import 'prismjs/components/prism-json' // Language
 import 'prismjs/themes/prism-okaidia.css' // Theme
 
 const Code = (props) => {

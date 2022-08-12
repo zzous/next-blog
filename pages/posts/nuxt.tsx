@@ -39,6 +39,32 @@ export default {
 `
         }
       </Code>
+      <p>components 폴더에 중첩된 구조라면 directory 구조와 파일명을 기반으로 구성된다.</p>
+      <Code language='js'>
+        {
+`// directory
+components/
+  base/
+    foo/
+      CustomButton.vue
+ 
+// useCase
+<BaseFooCustomButton />`
+        }
+      </Code>
+      <p>nuxt.config.js 파일에 dir 을 추가하여 directory 구조를 유지하면서 으로 사용 할 수 있다</p>
+      <Code language='js'>
+        {
+`// nuxt.config.js
+// components: true
+components: {
+  dirs: [
+    '~/components',
+    '~/components/base/foo'
+  ]
+}`
+        }
+      </Code>
       <div className='title sub'>Assets</div>
       <p>styles, images, font 등 compile 되지 않는 파일들이 포함</p>
       <div className='title sub'>Static</div>
